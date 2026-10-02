@@ -1,2 +1,0 @@
-# testingjs
-practice in js

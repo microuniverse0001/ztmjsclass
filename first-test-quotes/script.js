@@ -73,3 +73,20 @@ twitterBtn.addEventListener('click', tweetQuote);
 
 //on load
 getQuotes();
+
+//get quote from API
+async function getQuote() {
+    const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        console.log(data);
+
+    } catch (error) {
+        console.log('Damn,no quote for you', error);
+    }
+}
+
+//On Load
+getQuote();
+
